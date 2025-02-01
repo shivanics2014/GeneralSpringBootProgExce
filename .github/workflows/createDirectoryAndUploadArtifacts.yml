@@ -15,8 +15,8 @@ jobs :
             distribution: 'microsoft'
         - run : mvn --batch-mode --update-snapshots verify
         - run : mkdir stagingone && cp target /*.jar stagingone
-        - name: Download a Build Artifact
-          uses: actions/download-artifact@v4.1.8
+        - name: Upload a Build Artifact
+          uses: actions/upload-artifact@v4.6.0
           with:
             name: package_java
             path: stagingone
