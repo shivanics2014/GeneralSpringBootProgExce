@@ -14,6 +14,7 @@ jobs :
             java-version: '17'
             distribution: 'microsoft'
         - run : mvn --batch-mode --update-snapshots verify
+        - run: ls -la target
         - run : mkdir stagingone && cp target /*.jar stagingone
         - name: Upload a Build Artifact
           uses: actions/upload-artifact@v4.6.0
