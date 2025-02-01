@@ -1,5 +1,6 @@
 name : Create directory and upload file
 on : 
+  push : 
   workflow_dispatch : 
 jobs : 
   echo-maven-setup : 
