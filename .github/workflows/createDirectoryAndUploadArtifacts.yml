@@ -14,12 +14,12 @@ jobs :
             java-version: '17'
             distribution: 'microsoft'
         - run : mvn --batch-mode --update-snapshots verify
-        - run : mkdir staging && cp target /*.jar staging
+        - run : mkdir stagingone && cp target /*.jar stagingone
         - name: Download a Build Artifact
           uses: actions/download-artifact@v4.1.8
           with:
             name: package_java
-            path: staging
+            path: stagingone
           
    
           
